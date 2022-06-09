@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../bussinesLogic/showToDoList.php';
 require_once __DIR__ . '/../view/viewAddToDoList.php';
+require_once __DIR__ . '/../view/viewRemoveToDoList.php';
 require_once __DIR__ . '/../helper/input.php';
 
 function viewShowToDoList()
@@ -12,15 +13,17 @@ function viewShowToDoList()
 
         echo "MENU : " . PHP_EOL;
         echo "1. Tambah To Do List " . PHP_EOL . "2. Hapus To Do List" . PHP_EOL . "x. Keluar" . PHP_EOL;
+        if (isset($pesan)) echo $pesan;
         $pilihan = input("Pilihan Anda");
+        $pesan = "";
         if ($pilihan == "1") {
             viewAddToDoList();
         } elseif ($pilihan == "2") {
-            echo "2";
+            viewRemoveToDoList();
         } elseif ($pilihan == "x") {
             break;
         } else {
-            echo "Pilihan yang Anda masukkan tidak dapat dimengerti." . PHP_EOL;
+            $pesan = "Pilihan yang Anda masukkan tidak dapat dimengerti." . PHP_EOL;
         }
     }
 

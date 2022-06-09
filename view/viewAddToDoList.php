@@ -7,6 +7,8 @@ require_once __DIR__ . '/../view/viewShowToDoList.php';
 
 function viewAddToDoList()
 {
+    pclose(popen('cls', 'w'));
+
     echo "Tambah To Do List" . PHP_EOL;
     echo "Masukkan x untuk batal/kembali" . PHP_EOL;
     while (true) {
