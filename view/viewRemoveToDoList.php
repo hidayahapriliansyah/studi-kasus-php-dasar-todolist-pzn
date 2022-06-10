@@ -11,6 +11,8 @@ function viewRemoveToDoList()
     pclose(popen('cls', 'w'));
 
     echo "Hapus To Do List" . PHP_EOL;
+    while (true) {
+    }
     $todolist = showToDoList();
     if ($todolist == false) {
         echo "Masukkan x untuk batal/kembali" . PHP_EOL;
@@ -25,10 +27,6 @@ function viewRemoveToDoList()
             $removeToDoList = removeToDoList($pilihan);
             pclose(popen('cls', 'w'));
             if ($removeToDoList == false) echo "Pilihan yang Anda maksud gagal dihapus" . PHP_EOL;
-            showToDoList();
-            echo "Ada yang ingin dihapus lagi?" . PHP_EOL;
-            echo "Masukkan x untuk batal/kembali" . PHP_EOL;
-            echo "Masukkan nomor to do list yang akan dihapus" . PHP_EOL;
         }
     }
 }
