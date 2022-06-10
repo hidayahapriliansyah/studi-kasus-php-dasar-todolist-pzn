@@ -27,9 +27,19 @@ function viewShowToDoList()
         }
     }
 
-    $pesan = "Sampai jumpa ...";
+    $pesan = "Sampai jumpa ..." . PHP_EOL;
     for ($i = 0; $i <= (strlen($pesan) - 1); $i++) {
         usleep(100000);
+        echo "$pesan[$i]";
+    }
+    $pesan = "Adi Muhamad Firmansyah" . PHP_EOL;
+    for ($i = 0; $i <= (strlen($pesan) - 1); $i++) {
+        usleep(70000);
+        echo "$pesan[$i]";
+    }
+    $pesan = "Let's join Programmer Zaman Now" . PHP_EOL;
+    for ($i = 0; $i <= (strlen($pesan) - 1); $i++) {
+        usleep(50000);
         echo "$pesan[$i]";
     }
 }

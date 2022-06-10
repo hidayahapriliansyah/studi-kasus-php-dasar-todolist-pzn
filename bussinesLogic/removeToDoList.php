@@ -10,6 +10,7 @@ function removeToDoList(string $number)
             $lists[$i] = $lists[$i + 1];
         }
         unset($lists[sizeof($lists)]);
+        return true;
     } else if ($number == "x") {
         return true;
     } else {
