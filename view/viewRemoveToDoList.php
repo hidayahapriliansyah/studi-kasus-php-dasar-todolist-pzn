@@ -16,16 +16,10 @@ function viewRemoveToDoList()
     while (true) {
         $pilihan = input("");
         if ($pilihan == "x") break;
-        removeToDoList(trim($pilihan));
+        $removeToDoList = removeToDoList($pilihan);
         pclose(popen('cls', 'w'));
+        if ($removeToDoList == false) echo "Pilihan yang Anda maksud gagal dihapus" . PHP_EOL;
         showToDoList();
-        if (isset(array())) {
-            if (sizeof(array()) == 2) {
-                echo array()[1];
-            } else {
-                echo "To Do List no. $pilihan berhasil dihapus";
-            }
-        }
         echo "Ada yang ingin dihapus lagi?" . PHP_EOL;
         echo "Masukkan x untuk batal/kembali" . PHP_EOL;
         echo "Masukkan nomor to do list yang akan dihapus" . PHP_EOL;
