@@ -1,3 +1,4 @@
 <?php
 
-echo "APLIKASI TO DO LIST";
+require_once __DIR__ . '/view/viewShowToDoList.php';
+viewShowToDoList();
